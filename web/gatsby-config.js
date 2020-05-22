@@ -10,6 +10,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   plugins: [
+    '@bumped-inc/gatsby-plugin-optional-chaining',
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     {

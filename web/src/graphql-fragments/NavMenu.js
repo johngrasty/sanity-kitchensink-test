@@ -16,6 +16,15 @@ export const NavMenu = graphql`
           }
         }
       }
+      internalPageRoute {
+        ... on SanityPage {
+          id
+          _type
+          slug {
+            current
+          }
+        }
+      }
     }
   }
 `;

@@ -16,11 +16,18 @@ const doNavigate = target => {
 const CTALink = props => {
   let link = props.route || props.link || "#";
   if (
-    props.landingPageRoute &&
-    props.landingPageRoute.slug &&
-    props.landingPageRoute.slug.current
+    // props.landingPageRoute &&
+    // props.landingPageRoute.slug &&
+    // props.landingPageRoute.slug.current
+    props.landingPageRoute?.slug?.current
   ) {
-    link = props.landingPageRoute.slug.current;
+    link = props.landingPageRoute.slug.current
+  }
+
+  if (
+    props.internalPageRoute?.slug?.current
+  ){
+    link = props.internalPageRoute?.slug?.current
   }
 
   if (props.kind === "button") {

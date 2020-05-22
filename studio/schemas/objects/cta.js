@@ -23,6 +23,13 @@ export default {
       to: [{type: 'route'}]
     },
     {
+      title: 'Page link',
+      name: 'internalPageRoute',
+      type: 'reference',
+      fieldset: 'link',
+      to: [{type: 'page'}]
+    },
+    {
       title: 'Path',
       name: 'route',
       fieldset: 'link',
