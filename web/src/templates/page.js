@@ -108,6 +108,7 @@ const Page = (props) => {
 
   const menuItems = page.navMenu && (page.navMenu.items || []);
   const pageTitle = data.route && !data.route.useSiteTitle && page.title;
+  console.log(page.navMenu)
 
   return (
     <Layout navMenuItems={menuItems} textWhite={true}>

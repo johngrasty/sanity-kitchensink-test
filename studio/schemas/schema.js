@@ -21,7 +21,7 @@ import * as plugs from './plugs'
 import plugDefaultFields from './plugs/_plugDefaultFields'
 
 // Object types
-import { instagram, videoEmbed } from './objects/embeds'
+import {instagram, videoEmbed} from './objects/embeds'
 import cta from './objects/cta'
 import bodyPortableText from './objects/bodyPortableText'
 import excerptPortableText from './objects/excerptPortableText'
@@ -31,9 +31,11 @@ import link from './objects/link'
 import variation from './objects/variation'
 import openGraph from './objects/openGraph'
 import latex from './latex'
+import menuBranch from './objects/menuBranch'
+import menuItem from './objects/menuItem'
 
 const allPlugs = Object.values(plugs).map((plug) => {
-  return { ...plug, fields: plugDefaultFields.concat(plug.fields) }
+  return {...plug, fields: plugDefaultFields.concat(plug.fields)}
 })
 
 export default createSchema({
@@ -62,6 +64,8 @@ export default createSchema({
       videoEmbed,
       bodyPortableText,
       excerptPortableText,
+      menuBranch,
+      menuItem
     ])
-    .concat(allPlugs),
+    .concat(allPlugs)
 })
