@@ -1,5 +1,5 @@
 export default {
-  title: 'Menu Branch',
+  title: 'Sub Menu',
   name: 'menuBranch',
   type: 'object',
   fields: [
@@ -30,10 +30,10 @@ export default {
     {
       title: 'Menu Items',
       description: 'Submenus',
-      name: 'children',
+      name: 'submenuItems',
       type: 'array',
       of: [
-        {type: 'cta'}
+        {type: 'menuItem'}
         // { type: 'menuBranch' } // Allow menuBranches for infinite recursiveness. Breaks GraphQL though.
       ],
       validation: Rule => Rule.required()
@@ -41,7 +41,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       subtitle: '',
       media: ''
     },
